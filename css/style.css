@@ -1,0 +1,284 @@
+:root {
+    --bg: #0f172a;
+    --bg-secondary: #1e293b;
+    --glass: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --primary: #22d3ee;
+    --primary-hover: #06b6d4;
+    --primary-glow: rgba(34, 211, 238, 0.15);
+
+    --danger: #ef476f;
+    --danger-hover: #d62856;
+
+    --text: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --input: rgba(255, 255, 255, 0.05);
+    --input-hover: rgba(255, 255, 255, 0.08);
+
+    --shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    --radius: 20px;
+    --radius-sm: 12px;
+    --radius-xs: 8px;
+
+    --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top left, rgba(30, 58, 138, 0.6) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(8, 145, 178, 0.4) 0%, transparent 45%),
+        linear-gradient(160deg, #020617, #0f172a 50%, #0d1f36);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* ── Header ── */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #f1f5f9 30%, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* ── Card ── */
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+    transition: border-color var(--transition);
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.card h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 24px;
+    letter-spacing: -0.2px;
+}
+
+/* ── Form grid ── */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* ── Campo ── */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.campo input {
+    background: var(--input);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    padding: 13px 16px;
+    border-radius: var(--radius-sm);
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+    width: 100%;
+}
+
+.campo input::placeholder {
+    color: var(--text-muted);
+}
+
+.campo input:hover {
+    background: var(--input-hover);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.campo input:focus {
+    border-color: var(--primary);
+    background: rgba(34, 211, 238, 0.05);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+/* ── Botões ── */
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 13px 26px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+    margin-top: 20px;
+    letter-spacing: 0.2px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.98) translateY(0);
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: #072a38;
+}
+
+.btn-enviar:hover {
+    box-shadow: 0 8px 24px rgba(34, 211, 238, 0.3);
+}
+
+.btn-limpar {
+    background: rgba(239, 71, 111, 0.15);
+    color: var(--danger);
+    border: 1px solid rgba(239, 71, 111, 0.3);
+}
+
+.btn-limpar:hover {
+    background: var(--danger);
+    color: white;
+    box-shadow: 0 8px 24px rgba(239, 71, 111, 0.3);
+}
+
+.imovel-lista {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+
+.imovel-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 22px 24px;
+    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.imovel-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34, 211, 238, 0.35);
+    background: rgba(34, 211, 238, 0.03);
+}
+
+.imovel-item h3 {
+    color: var(--primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.imovel-item p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 0.95rem;
+}
+
+.vazio {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    border: 2px dashed rgba(255, 255, 255, 0.08);
+    font-size: 0.95rem;
+}
+
+.mensagem-status {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.mensagem-status.sucesso {
+    background: rgba(34, 197, 94, 0.1);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.mensagem-status.erro {
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    .card {
+        padding: 22px 18px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}
