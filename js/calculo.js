@@ -30,6 +30,23 @@ export const calcularValorAdicional = (valorLote) => {
     return Number((valorLote * percentual).toFixed(2));
 };
 
+export const calcularLote = ({ descricao, comprimento, largura }) => {
+    const area = calcularArea(comprimento, largura);
+    const valorLote = calcularValorDoLote(area);
+    const percentualAdicional = calcularPercentualAdicional(valorLote);
+    const valorAdicional = calcularValorAdicional(valorLote);
+
+    return {
+        descricao,
+        comprimento,
+        largura,
+        area,
+        valorLote,
+        percentualAdicional,
+        valorAdicional
+    };
+};
+
 export const formatarMoeda = (valor) => {
     return valor.toLocaleString('pt-BR', {
         style: 'currency',

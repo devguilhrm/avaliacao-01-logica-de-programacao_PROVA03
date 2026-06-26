@@ -1,25 +1,25 @@
 :root {
-    --bg: #0f172a;
-    --bg-secondary: #1e293b;
-    --glass: rgba(255, 255, 255, 0.06);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --bg: #f5f7f9;
+    --bg-secondary: #eef2f6;
+    --glass: #ffffff;
+    --glass-border: #d7dee8;
 
-    --primary: #22d3ee;
-    --primary-hover: #06b6d4;
-    --primary-glow: rgba(34, 211, 238, 0.15);
+    --primary: #0e7490;
+    --primary-hover: #155e75;
+    --primary-glow: rgba(14, 116, 144, 0.2);
 
-    --danger: #ef476f;
-    --danger-hover: #d62856;
+    --danger: #b42318;
+    --danger-hover: #8b1a10;
 
-    --text: #f1f5f9;
-    --text-secondary: #94a3b8;
+    --text: #18222f;
+    --text-secondary: #64748b;
     --text-muted: #64748b;
 
-    --input: rgba(255, 255, 255, 0.05);
-    --input-hover: rgba(255, 255, 255, 0.08);
+    --input: #eef2f6;
+    --input-hover: #e8eef6;
 
-    --shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow: 0 24px 52px rgba(15, 23, 42, 0.14);
+    --shadow-sm: 0 8px 22px rgba(17, 24, 39, 0.06);
 
     --radius: 20px;
     --radius-sm: 12px;
@@ -38,9 +38,9 @@ body {
     font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
     min-height: 100vh;
     background:
-        radial-gradient(ellipse at top left, rgba(30, 58, 138, 0.6) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom right, rgba(8, 145, 178, 0.4) 0%, transparent 45%),
-        linear-gradient(160deg, #020617, #0f172a 50%, #0d1f36);
+        radial-gradient(circle at 10% 5%, rgba(14, 116, 144, 0.08) 0%, transparent 34%),
+        radial-gradient(circle at 95% 12%, rgba(14, 116, 144, 0.06) 0%, transparent 30%),
+        linear-gradient(160deg, #f5f7f9, #ffffff 50%, #eef2f6);
     color: var(--text);
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ header h1 {
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, #f1f5f9 30%, var(--primary));
+    background: linear-gradient(135deg, #18222f 30%, var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -89,7 +89,7 @@ header p {
 }
 
 .card:hover {
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(14, 116, 144, 0.25);
 }
 
 .card h2 {
@@ -124,7 +124,7 @@ header p {
 
 .campo input {
     background: var(--input);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(14, 116, 144, 0.2);
     color: var(--text);
     padding: 13px 16px;
     border-radius: var(--radius-sm);
@@ -140,12 +140,12 @@ header p {
 
 .campo input:hover {
     background: var(--input-hover);
-    border-color: rgba(255, 255, 255, 0.16);
+    border-color: rgba(14, 116, 144, 0.3);
 }
 
 .campo input:focus {
     border-color: var(--primary);
-    background: rgba(34, 211, 238, 0.05);
+    background: rgba(14, 116, 144, 0.04);
     box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
@@ -164,7 +164,7 @@ button {
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 24px rgba(14, 116, 144, 0.2);
 }
 
 button:active {
@@ -173,23 +173,23 @@ button:active {
 
 .btn-enviar {
     background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-    color: #072a38;
+    color: #ffffff;
 }
 
 .btn-enviar:hover {
-    box-shadow: 0 8px 24px rgba(34, 211, 238, 0.3);
+    box-shadow: 0 8px 24px rgba(14, 116, 144, 0.25);
 }
 
 .btn-limpar {
-    background: rgba(239, 71, 111, 0.15);
+    background: rgba(180, 35, 24, 0.08);
     color: var(--danger);
-    border: 1px solid rgba(239, 71, 111, 0.3);
+    border: 1px solid rgba(180, 35, 24, 0.2);
 }
 
 .btn-limpar:hover {
     background: var(--danger);
     color: white;
-    box-shadow: 0 8px 24px rgba(239, 71, 111, 0.3);
+    box-shadow: 0 8px 24px rgba(180, 35, 24, 0.2);
 }
 
 .imovel-lista {
@@ -199,8 +199,8 @@ button:active {
 }
 
 .imovel-item {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(14, 116, 144, 0.03);
+    border: 1px solid rgba(14, 116, 144, 0.1);
     border-radius: 16px;
     padding: 22px 24px;
     transition: transform var(--transition), border-color var(--transition), background var(--transition);
@@ -208,8 +208,8 @@ button:active {
 
 .imovel-item:hover {
     transform: translateY(-3px);
-    border-color: rgba(34, 211, 238, 0.35);
-    background: rgba(34, 211, 238, 0.03);
+    border-color: rgba(14, 116, 144, 0.3);
+    background: rgba(14, 116, 144, 0.06);
 }
 
 .imovel-item h3 {
@@ -229,9 +229,9 @@ button:active {
     text-align: center;
     padding: 40px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(14, 116, 144, 0.04);
     color: var(--text-muted);
-    border: 2px dashed rgba(255, 255, 255, 0.08);
+    border: 2px dashed rgba(14, 116, 144, 0.12);
     font-size: 0.95rem;
 }
 
@@ -250,15 +250,15 @@ button:active {
 }
 
 .mensagem-status.sucesso {
-    background: rgba(34, 197, 94, 0.1);
-    color: #86efac;
-    border: 1px solid rgba(34, 197, 94, 0.25);
+    background: rgba(19, 121, 91, 0.08);
+    color: #0c6b4f;
+    border: 1px solid rgba(19, 121, 91, 0.2);
 }
 
 .mensagem-status.erro {
-    background: rgba(239, 68, 68, 0.1);
-    color: #fca5a5;
-    border: 1px solid rgba(239, 68, 68, 0.25);
+    background: rgba(180, 35, 24, 0.08);
+    color: #9a2416;
+    border: 1px solid rgba(180, 35, 24, 0.2);
 }
 
 @media (max-width: 768px) {
