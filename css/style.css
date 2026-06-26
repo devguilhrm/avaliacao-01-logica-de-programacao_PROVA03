@@ -75,7 +75,7 @@ header p {
     font-size: 1rem;
 }
 
-/* ── Card ── */
+/* Card  */
 .card {
     background: var(--glass);
     backdrop-filter: blur(24px);
@@ -192,6 +192,18 @@ button:active {
     box-shadow: 0 8px 24px rgba(180, 35, 24, 0.2);
 }
 
+.lista-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 16px;
+}
+
+.lista-header h2 {
+    margin: 0;
+}
+
 .imovel-lista {
     list-style: none;
     display: grid;
@@ -204,6 +216,8 @@ button:active {
     border-radius: 16px;
     padding: 22px 24px;
     transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    display: grid;
+    gap: 12px;
 }
 
 .imovel-item:hover {
@@ -216,13 +230,62 @@ button:active {
     color: var(--primary);
     font-size: 1.05rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .imovel-item p {
     color: var(--text-secondary);
     line-height: 1.75;
     font-size: 0.95rem;
+    margin: 0;
+}
+
+.imovel-info {
+    display: grid;
+    gap: 6px;
+}
+
+.imovel-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn-editar,
+.btn-remover {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition);
+    min-height: 36px;
+}
+
+.btn-editar {
+    background: rgba(14, 116, 144, 0.12);
+    color: var(--primary);
+    border: 1px solid rgba(14, 116, 144, 0.2);
+}
+
+.btn-editar:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-remover {
+    background: rgba(180, 35, 24, 0.12);
+    color: var(--danger);
+    border: 1px solid rgba(180, 35, 24, 0.2);
+}
+
+.btn-remover:hover {
+    background: var(--danger);
+    color: white;
+    transform: translateY(-1px);
 }
 
 .vazio {
@@ -279,6 +342,29 @@ button:active {
     }
 
     button {
+        width: 100%;
+    }
+
+    .lista-header {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 24px;
+    }
+
+    .lista-header h2 {
+        order: 1;
+    }
+
+    .btn-limpar {
+        order: 2;
+    }
+
+    .imovel-actions {
+        flex-direction: column;
+    }
+
+    .btn-editar,
+    .btn-remover {
         width: 100%;
     }
 }
