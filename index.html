@@ -6,7 +6,7 @@
     <title>Cadastro de Imóveis</title>
     <link rel="stylesheet" href="css/style.css">
     
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -34,7 +34,7 @@
                 </div>
 
                 <div style="margin-top: 20px; text-align: right;">
-                    <button type="submit">Adicionar Imóvel</button>
+                    <button type="submit" class="btn-enviar">Adicionar Imóvel</button>
                 </div>
             </form>
         </div>
@@ -42,10 +42,10 @@
         <div class="card">
             <div class="lista-header">
                 <h2>Imóveis Cadastrados</h2>
-                <button type="button" id="btn-limpar-lista">Limpar lista</button>
+                <button type="button" id="btn-limpar-lista" class="btn-limpar">Limpar lista</button>
             </div>
             <div id="div-lista-imoveis" class="imovel-lista">
-                
+
             </div>
         </div>
 

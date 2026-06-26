@@ -8,6 +8,7 @@ export const calcularValorDoLote = (area) => {
     return Number((area * VALOR_POR_METRO).toFixed(2));
 };
 
+
 export const calcularPercentualAdicional = (valorLote) => {
     if (valorLote <= 20000) {
         return 0;
